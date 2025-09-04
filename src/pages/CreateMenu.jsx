@@ -60,13 +60,14 @@ export default function CreateMenu() {
     const submitMenu = async () => {
         try {
             const menuRequest = selectedFoods.map((f) => ({
-                id: f.id,
+                foodId: f.id,
                 foodName: f.foodName,
                 quantity: f.quantity, // in grams
             }));
 
-            //await api.post("/api/create-menu/foods", menuRequest);
             console.log(menuRequest);
+            await api.post("/api/diet/create-menu/foods", {"menu" : menuRequest});
+
             alert("Menu submitted successfully!");
             setSelectedFoods([]);
             setActivityLevel("");
