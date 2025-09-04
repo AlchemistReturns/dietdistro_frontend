@@ -10,10 +10,14 @@ export default function Navbar() {
         <h1 className="text-green-800 font-bold text-xl">DietDistro</h1>
         <div className="space-x-4">
           <Link to="/">Home</Link>
+          <Link to="/meals">Find recipes</Link>
           {user && <Link to="/dashboard">Dashboard</Link>}
           {user && <Link to="/health-profile">Profile</Link>}
           {user && <Link to="/create-menu">Create Menu</Link>}
           {user && <Link to="/food-wiki">Food Wiki</Link>}
+            {user?.roles?.includes("ROLE_ADMIN") && (
+                <Link to="/add-food">Add Food</Link>
+            )}
           {user ? (
               <button onClick={logout} className="ml-2">Logout</button>
           ) : (

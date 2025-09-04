@@ -5,7 +5,7 @@ export default function FoodWiki() {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        getFoodWiki().then(res => setFoods(res.data.foodItems || []));
+        getFoodWiki().then(res => setFoods(res.data || []));
     }, []);
 
     return (
