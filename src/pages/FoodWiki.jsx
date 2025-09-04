@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { getFoodWiki } from '../api/api.js';
+import { deleteFood, getFoodWiki} from '../api/api.js';
+import {useAuth} from "../state/AuthContext.jsx";
 
 export default function FoodWiki() {
     const [foods, setFoods] = useState([]);
+    const {user} = useAuth();
+    console.log("Looking for food");
+    console.log(foods);
 
     useEffect(() => {
         getFoodWiki().then(res => setFoods(res.data || []));
     }, []);
+    async function handleDelete(id) {
+        try {
+            await deleteFood(id); // replace with your API call
+            setFoods((prev) => prev.filter((f) => f.id !== id));
+        } catch (error) {
+            console.error("Delete failed", error);
+        }
+    }
 
     return (
         <div className="p-6 max-w-4xl mx-auto">
@@ -18,6 +30,14 @@ export default function FoodWiki() {
                         <p>Calories: {food.calorie}</p>
                         <p>Carbs: {food.carbohydrate} | Protein: {food.protein} | Fat: {food.fat}</p>
                         <p>{food.description}</p>
+                        {user?.roles?.includes("ROLE_ADMIN") && (
+                            <button
+                                onClick={() => handleDelete(food.id)}
+                                className="mt-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-500"
+                            >
+                                Delete
+                            </button>
+                        )}
                     </div>
                 ))}
             </div>

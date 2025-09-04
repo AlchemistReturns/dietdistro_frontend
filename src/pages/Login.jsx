@@ -12,7 +12,7 @@ export default function Login() {
   };
 
   return (
-      <div className="min-h-screen flex items-center justify-center bg-green-50">
+      <div className="min-h-screen flex items-center justify-center">
         <form onSubmit={handleSubmit} className="card w-full max-w-md">
           <h2 className="text-2xl font-bold text-green-800 mb-4">Login</h2>
           <input

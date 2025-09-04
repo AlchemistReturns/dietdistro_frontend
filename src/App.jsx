@@ -14,7 +14,7 @@ import AddFood from "./pages/AddFood.jsx";
 
 export default function App() {
   return (
-      <>
+      <div className="font-primary">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +29,6 @@ export default function App() {
           <Route path="/food-wiki" element={<ProtectedRoute><FoodWiki /></ProtectedRoute>} />
             <Route path="/add-food" element={<AddFood />} />
         </Routes>
-      </>
+      </div>
   );
 }

@@ -6,8 +6,8 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-      <nav className="bg-green-100 p-4 flex justify-between items-center shadow">
-        <h1 className="text-green-800 font-bold text-xl">DietDistro</h1>
+      <nav className="bg-green-100 p-4 flex justify-between items-center shadow max-w-5xl mx-auto">
+        <h1 className="text-green-800 font-bold text-xl font-primary">DietDistro</h1>
         <div className="space-x-4">
           <Link to="/">Home</Link>
           <Link to="/meals">Find recipes</Link>

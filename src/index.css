@@ -2,13 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'primary';
+  src: url("../src/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'secondary';
+  src: url("../src/fonts/chinese rocks rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary: #3b7d3b; /* organic green */
   --primary-light: #e6f2e6;
 }
 
+
+
 body {
-  @apply bg-gray-50 text-gray-800;
+  background-color: white;
+  background-image: url("../src/assets/gradient_4_16.jpg");
+  background-size: cover;
 }
 a {
   @apply text-green-700 hover:text-green-900;

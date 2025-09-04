@@ -23,7 +23,7 @@ export default function MealSearch() {
     };
 
     return (
-        <div className="p-6 max-w-4xl mx-auto">
+        <div className="p-6 max-w-4xl mx-auto font-primary">
             <h1 className="text-2xl font-bold text-green-800 mb-4">Recipe Search</h1>
 
             <form onSubmit={searchMeals} className="mb-6 flex gap-2">

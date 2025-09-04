@@ -9,6 +9,10 @@ export default {
       colors: {
         primary: "#3b7d3b",
       },
+      fontFamily: {
+        primary: ['primary', 'sans-serif'],
+        secondary: ['secondary', 'sans-serif'],
+      },
     },
     plugins: [],
   }

@@ -37,6 +37,7 @@ export const setCarbohydrate = (data) =>
 
 // Food Wiki
 export const getFoodWiki = () => api.get('/api/food/show');
+export const deleteFood = (id) => api.delete(`/api/food/delete/${id}`);
 
 // Utility
 export const getUserInfo = (username) => api.get(`/api/util/user-info/${username}`);
