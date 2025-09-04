@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b7d3b; /* organic green */
+  --primary-light: #e6f2e6;
+}
+
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+a {
+  @apply text-green-700 hover:text-green-900;
+}
+button {
+  @apply bg-primary text-white px-4 py-2 rounded shadow hover:bg-green-800 transition;
+}
+.card {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
