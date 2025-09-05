@@ -11,6 +11,7 @@ import FoodWiki from './pages/FoodWiki.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import MealSearch from "./pages/MealSearch.jsx";
 import AddFood from "./pages/AddFood.jsx";
+import BrowseMenus from "./pages/BrowseMenus.jsx";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/create-menu" element={<ProtectedRoute><CreateMenu /></ProtectedRoute>} />
           <Route path="/food-wiki" element={<ProtectedRoute><FoodWiki /></ProtectedRoute>} />
             <Route path="/add-food" element={<AddFood />} />
+            <Route path="/social" element={<BrowseMenus />} />
         </Routes>
       </div>
   );

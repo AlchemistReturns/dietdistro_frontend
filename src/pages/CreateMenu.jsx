@@ -62,7 +62,7 @@ export default function CreateMenu() {
             const menuRequest = selectedFoods.map((f) => ({
                 foodId: f.id,
                 foodName: f.foodName,
-                quantity: f.quantity, // in grams
+                foodQuantity: f.quantity, // in grams
             }));
 
             console.log(menuRequest);
@@ -83,7 +83,7 @@ export default function CreateMenu() {
     );
 
     return (
-        <div className="max-w-4xl mx-auto p-4">
+        <div className="max-w-[1200px] mx-auto p-4">
             <h1 className="text-2xl font-bold mb-4">Create Your Menu</h1>
 
             {/* Activity Level Selection */}

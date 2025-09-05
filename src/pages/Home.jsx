@@ -5,7 +5,7 @@ export default function Home() {
     const { user } = useAuth();
 
     return (
-        <div className="p-6 max-w-5xl mx-auto font-primary min-h-screen flex flex-col items-center justify-center">
+        <div className="p-6 max-w-[1200px] mx-auto font-primary min-h-screen flex flex-col items-center justify-center">
             <h1 className="text-4xl font-extrabold text-green-800 mb-4 text-center">
                 Welcome {user ? user.username : 'Guest'}
             </h1>
